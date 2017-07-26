@@ -9,15 +9,15 @@ pipeline {
 		 		sh "echo 'first pipeline doin great'"
 	 		}
 	 	}
-
-		post {
-	    	success {
-	    		echo "Only when we haven't failed running the first stage"
-	    	}
-	    
-	    	failure {
-	    		echo "Only when we fail running the first stage."
-	    	}
-	  	}
 	}
+	
+	post {
+    	success {
+    		echo "Only when we haven't failed running the first stage"
+    	}
+    
+    	failure {
+    		echo "Only when we fail running the first stage."
+    	}
+  	}	
 }
