@@ -1,9 +1,11 @@
 pipeline {
  stages {
  	stage('Do something') {
- 		sh "date"
- 		sh "ls -la"
- 		sh "echo 'first pipeline doin great'"
+ 		steps {
+	 		sh "date"
+	 		sh "ls -la"
+	 		sh "echo 'first pipeline doin great'"
+ 		}
  	}
 
 	post {
