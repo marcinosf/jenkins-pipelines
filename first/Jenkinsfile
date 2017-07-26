@@ -7,7 +7,6 @@ pipeline {
 		 		sh "date"
 		 		sh "ls -la"
 		 		sh "echo 'feature branch'"
-		 		sh "cd /unimaginable_dir"
 	 		}
 	 	}
 	}
