@@ -13,11 +13,11 @@ pipeline {
 	
 	post {
     	success {
-    		echo "Only when we haven't failed running the first stage"
+    		echo "This is success!"
     	}
     
     	failure {
-    		echo "Only when we fail running the first stage."
+    		echo "Failure on dev branch."
     	}
   	}	
 }
