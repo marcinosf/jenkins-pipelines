@@ -6,7 +6,8 @@ pipeline {
 	 		steps {
 		 		sh "date"
 		 		sh "ls -la"
-		 		sh "echo 'feature branch'"
+		 		sh "sleep 20s"
+		 		sh "echo 'first pipeline doin great'"
 	 		}
 	 	}
 	}
