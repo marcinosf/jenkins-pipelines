@@ -1,21 +1,23 @@
 pipeline {
- stages {
- 	stage('Do something') {
- 		steps {
-	 		sh "date"
-	 		sh "ls -la"
-	 		sh "echo 'first pipeline doin great'"
- 		}
- 	}
+	agent any
 
-	post {
-    	success {
-    		echo "Only when we haven't failed running the first stage"
-    	}
-    
-    	failure {
-    		echo "Only when we fail running the first stage."
-    	}
-  	}
- }
+	stages {
+	 	stage('Do something') {
+	 		steps {
+		 		sh "date"
+		 		sh "ls -la"
+		 		sh "echo 'first pipeline doin great'"
+	 		}
+	 	}
+
+		post {
+	    	success {
+	    		echo "Only when we haven't failed running the first stage"
+	    	}
+	    
+	    	failure {
+	    		echo "Only when we fail running the first stage."
+	    	}
+	  	}
+	}
 }
